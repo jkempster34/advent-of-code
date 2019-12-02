@@ -22,9 +22,6 @@ describe('Day 1: The Tyranny of the Rocket Equation. Part Two', () => {
     expect(
       fuelRequirementsWithAdditonalRequirements(fuelRequirementsInput)
     ).to.be.a('number');
-    console.log(
-      fuelRequirementsWithAdditonalRequirements(fuelRequirementsInput)
-    );
   });
   it('returns the correct number for one input where the result rounded down is 0', () => {
     expect(fuelRequirementsWithAdditonalRequirements([14])).to.equal(2);
