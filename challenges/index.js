@@ -16,7 +16,12 @@ const fuelRequirementsWithAdditonalRequirements = fuelModulesArray => {
   }, 0);
 };
 
+const programAlarm = programInput => {
+  return programInput;
+};
+
 module.exports = {
   fuelRequirements,
-  fuelRequirementsWithAdditonalRequirements
+  fuelRequirementsWithAdditonalRequirements,
+  programAlarm
 };

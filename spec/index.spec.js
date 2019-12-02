@@ -1,9 +1,10 @@
 const {
   fuelRequirements,
-  fuelRequirementsWithAdditonalRequirements
+  fuelRequirementsWithAdditonalRequirements,
+  programAlarm
 } = require('../challenges');
 const { expect } = require('chai');
-const { fuelRequirementsInput } = require('./data');
+const { fuelRequirementsInput, programAlarmInput } = require('./data');
 
 describe('Day 1: The Tyranny of the Rocket Equation', () => {
   it('returns a number', () => {
@@ -33,5 +34,11 @@ describe('Day 1: The Tyranny of the Rocket Equation. Part Two', () => {
     expect(fuelRequirementsWithAdditonalRequirements([1969, 100756])).to.equal(
       51312
     );
+  });
+});
+
+describe('Day 2: 1202 Program Alarm', () => {
+  it('returns an array', () => {
+    expect(programAlarm(programAlarmInput)).to.be.an('array');
   });
 });
