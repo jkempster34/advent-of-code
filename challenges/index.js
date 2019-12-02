@@ -5,4 +5,18 @@ const fuelRequirements = fuelModulesArray => {
   );
 };
 
-module.exports = { fuelRequirements };
+const fuelRequirementsWithAdditonalRequirements = fuelModulesArray => {
+  return fuelModulesArray.reduce((sum, individualModule) => {
+    let total = 0;
+    while (individualModule > 0) {
+      total = Math.floor(individualModule / 3) - 2;
+      individualModule = -(Math.floor(individualModule / 3) - 2);
+    }
+    return sum + total;
+  }, 0);
+};
+
+module.exports = {
+  fuelRequirements,
+  fuelRequirementsWithAdditonalRequirements
+};
