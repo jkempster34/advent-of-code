@@ -22,14 +22,19 @@ describe('Day 1: The Tyranny of the Rocket Equation. Part Two', () => {
     expect(
       fuelRequirementsWithAdditonalRequirements(fuelRequirementsInput)
     ).to.be.a('number');
+    console.log(
+      fuelRequirementsWithAdditonalRequirements(fuelRequirementsInput)
+    );
   });
   it('returns the correct number for one input where the result rounded down is 0', () => {
-    expect(fuelRequirements([12])).to.equal(2);
+    expect(fuelRequirementsWithAdditonalRequirements([14])).to.equal(2);
   });
   it('returns the correct number for one input where the result rounded down is more than 0', () => {
-    expect(fuelRequirements([1969])).to.equal(966);
+    expect(fuelRequirementsWithAdditonalRequirements([1969])).to.equal(966);
   });
   it('returns the correct number for multiple inputs where the results of these inputs rounded down is more than 0', () => {
-    expect(fuelRequirements([1969, 100756])).to.equal(51312);
+    expect(fuelRequirementsWithAdditonalRequirements([1969, 100756])).to.equal(
+      51312
+    );
   });
 });

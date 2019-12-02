@@ -9,8 +9,8 @@ const fuelRequirementsWithAdditonalRequirements = fuelModulesArray => {
   return fuelModulesArray.reduce((sum, individualModule) => {
     let total = 0;
     while (individualModule > 0) {
-      total = Math.floor(individualModule / 3) - 2;
-      individualModule = -(Math.floor(individualModule / 3) - 2);
+      individualModule = Math.floor(individualModule / 3) - 2;
+      if (individualModule > 0) total += individualModule;
     }
     return sum + total;
   }, 0);
