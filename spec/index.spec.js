@@ -41,4 +41,29 @@ describe('Day 2: 1202 Program Alarm', () => {
   it('returns an array', () => {
     expect(programAlarm(programAlarmInput)).to.be.an('array');
   });
+  it('breaks out of the program if it hit 99', () => {
+    expect(programAlarm([1, 0, 0, 0, 99, 1, 0, 0, 99])).to.have.lengthOf(5);
+  });
+  it('returns the correct result for one section of code which begins with 1', () => {
+    expect(programAlarm([1, 0, 0, 0, 99])).to.eql([2, 0, 0, 0, 99]);
+  });
+  it('returns the correct result for one section of code which begins with 2', () => {
+    expect(programAlarm([2, 3, 0, 3, 99])).to.eql([2, 3, 0, 6, 99]);
+  });
+  it('returns the correct result multiple sections of code', () => {
+    expect(programAlarm([1, 1, 1, 4, 99, 5, 6, 0, 99])).to.eql([
+      30,
+      1,
+      1,
+      4,
+      2,
+      5,
+      6,
+      0,
+      99
+    ]);
+  });
+  it('does not modify the input array', () => {
+    expect(programAlarm(programAlarmInput)).to.be.an('array');
+  });
 });
